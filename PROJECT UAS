@@ -1,0 +1,126 @@
+Riska Safitri 
+def meet1():
+    print("\n=== MEET 1: Perbandingan nilai ===")
+    a = 12
+    b = 56
+    print("a < b:", a < b)
+    print("a > b:", a > b)
+    print("a <= b:", a <= b)
+    print("a != b:", a != b)
+    print("a not b: (a not b)")
+
+def meet2():
+    print("\n=== MEET 2: Operasi logika ===")
+    x = True
+    z = not x
+    print("nilai dari z =", z)
+
+    print("**** and *****")
+    print(True, 'and', True, '=', True and True)
+    print(True, 'and', False, '=', True and False)
+    print(False, 'and', True, '=', False and True)
+    print(False, 'and', False, '=', False and False)
+
+    print("**** xor *****")
+    print(True, 'xor', True, '=', True != True)
+    print(True, 'xor', False, '=', True != False)
+    print(False, 'xor', True, '=', False != True)
+    print(False, 'xor', False, '=', False != False)
+
+def meet3_4():
+    print("\n=== MEET 3_4: Hitung luas persegi atau segitiga ===")
+    masukan = input("apakah anda ingin menghitung persegi atau segitiga? ")
+
+    if masukan == "persegi":
+        panjang = int(input("masukan panjang: "))
+        lebar = int(input("masukan lebar: "))
+        luas = panjang * lebar
+        print(f"luas persegi = {luas}")
+
+    elif masukan == "segitiga":
+        alas = int(input("masukan alas: "))
+        tinggi = int(input("masukan tinggi: "))
+        luas = 0.5 * alas * tinggi
+        print(f"luas segitiga = {luas}")
+    else:
+        print("Pilihan tidak valid")
+
+def meet5():
+    print("\n=== MEET 5: Kalkulator sederhana ===")
+    oprasi = input("anda ingin mengoperasikan apa (x + - /): ")
+    bil1 = float(input("masukan bilangan pertama: "))
+    bil2 = float(input("masukan bilangan kedua: "))
+
+    if oprasi == "+":
+        print("Hasil =", bil1 + bil2)
+    elif oprasi == "-":
+        print("Hasil =", bil1 - bil2)
+    elif oprasi == "x":
+        print("Hasil =", bil1 * bil2)
+    elif oprasi == "/":
+        print("Hasil =", bil1 / bil2)
+    else:
+        print("Operasi tidak valid.")
+
+def meet6():
+    print("\n=== MEET 6: Hak Akses ===")
+    hak_akses = "bukan admin"
+    print("full akses" if hak_akses == "admin" else "akses denied")
+
+def meet7():
+    print("\n=== MEET 7: Cek Panjang Password ===")
+    password = input("masukkan password anda: ")
+    if len(password) < 8:
+        print("karakter kurang")
+    else:
+        print("karakter cukup")
+
+def meet8():
+    print("\n=== MEET 8: String Number ===")
+    number = "1234567890"
+    print("data terakhir:", number[-1])
+    print("data pertama:", number[0])
+    print("data ke 3 - ke 6:", number[2:6])
+
+def meet9():
+    print("\n=== MEET 9: Pisahkan Nama dan Domain ===")
+    nama_domain = input("masukkan nama domain (contoh: kezii.com): ")
+    index = nama_domain.index(".")
+    nama = nama_domain[:index]
+    domain = nama_domain[index:]
+    print(f"nama anda adalah = {nama}")
+    print(f"domain anda adalah = {domain}")
+
+# =====================
+# MENU UTAMA
+# =====================
+print("\n=== DAFTAR PROGRAM ===")
+print("1. Meet1 (perbandingan kemungkinan nilai)")
+print("2. Meet2 (operasi logika)")
+print("3. Meet3_4 (perhitungan luas)")
+print("4. Meet5 (kalkulator sederhana)")
+print("5. Meet6 (hak akses)")
+print("6. Meet7 (password)")
+print("7. Meet8 (string number)")
+print("8. Meet9 (domain)")
+
+pilihan = input("Masukkan pilihan (1-8): ")
+
+if pilihan == "1":
+    meet1()
+elif pilihan == "2":
+    meet2()
+elif pilihan == "3":
+    meet3_4()
+elif pilihan == "4":
+    meet5()
+elif pilihan == "5":
+    meet6()
+elif pilihan == "6":
+    meet7()
+elif pilihan == "7":
+    meet8()
+elif pilihan == "8":
+    meet9()
+else:
+    print("Pilihan tidak valid.")
